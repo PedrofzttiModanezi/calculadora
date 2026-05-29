@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Juros</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="calculator-container">
+        <h2>Simulador de Juros</h2>
+        
+        <form id="jurosForm">
+            <div class="input-group">
+                <label for="capital">Capital Inicial (R$)</label>
+                <input type="number" id="capital" placeholder="Ex: 1000.00" step="0.01">
+            </div>
+
+            <div id="container-aporte" class="input-group animated-field" style="display: none;">
+                <label for="aporte">Aporte Mensal (R$)</label>
+                <input type="number" id="aporte" placeholder="Ex: 100.00" step="0.01" value="0">
+            </div>
+
+            <div class="form-row">
+                <div class="input-group">
+                    <label for="juros">Taxa de Juros (% ao mês)</label>
+                    <input type="number" id="juros" placeholder="Ex: 1" step="0.01">
+                </div>
+
+                <!-- CAMPO ATUALIZADO: Tempo + Escolha de Período -->
+                <div class="input-group">
+                    <label for="tempo">Tempo</label>
+                    <div class="periodo-row">
+                        <input type="number" id="tempo" placeholder="Ex: 12" step="1">
+                        <select id="periodoTempo">
+                            <option value="meses">Meses</option>
+                            <option value="anos">Anos</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="input-group">
+                <label for="tipo">Tipo de Rendimento</label>
+                <select id="tipo">
+                    <option value="simples">Juros Simples</option>
+                    <option value="composto">Juros Compostos</option>
+                </select>
+            </div>
+
+            <div class="button-group top-buttons">
+                <button type="button" class="btn-calc" onclick="calcular()">Calcular</button>
+                <button id="btn-limpar" type="button" class="btn-clear">Limpar</button>
+            </div>
+
+            <div class="button-group saiba-group">
+                <a href="calc.html" class="btn-saiba-link">
+                    <button id="btn-toggle-aporte" type="button" class="btn-saiba">saiba mais</button>
+                </a>
+            </div>
+        </form>
+
+        <div id="resultado" class="result-box"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

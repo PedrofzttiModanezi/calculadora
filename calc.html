@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aprendendo Juros: Simples e Compostos</title>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --secondary: #2f4d92;
+            --accent: #3b82f6;
+            --bg: #f8fafc;
+            --text: #334155;
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            background-color: var(--bg);
+            color: var(--text);
+        }
+
+        header {
+            background: var(--secondary);
+            color: white;
+            padding: 3rem 1rem;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 850px;
+            margin: 2rem auto;
+            padding: 0 1.5rem;
+        }
+
+        .card {
+            background: white;
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        h2 {
+            color: var(--primary);
+            font-size: 1.8rem;
+            margin-top: 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .formula-container {
+            background: #f1f5f9;
+            border-radius: 8px;
+            padding: 2rem;
+            margin: 1.5rem 0;
+            text-align: center;
+            border-left: 6px solid var(--primary);
+        }
+
+        .formula {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--secondary);
+            letter-spacing: 1px;
+        }
+
+        .legend {
+            margin-top: 1rem;
+            font-size: 0.95rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 10px;
+            text-align: left;
+        }
+
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+        }
+
+        .comparison-table th, .comparison-table td {
+            padding: 12px;
+            border: 1px solid #e2e8f0;
+            text-align: left;
+        }
+
+        .comparison-table th {
+            background-color: #f8fafc;
+            color: var(--primary);
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: bold;
+            background: #dbeafe;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 3rem;
+            color: #94a3b8;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Educação Financeira</h1>
+        <p>Domine os conceitos de Juros Simples e Compostos</p>
+    </header>
+
+    <div class="container">
+        
+        <section class="card">
+            <span class="badge">Crescimento Linear</span>
+            <h2>Juros Simples</h2>
+            <p>Nos <strong>Juros Simples</strong>, o valor do rendimento é calculado exclusivamente sobre o capital inicial. Isso significa que o valor que você ganha (ou paga) é o mesmo em todos os períodos de tempo.</p>
+            
+            <div class="formula-container">
+                <div class="formula">J = C · i · t</div>
+                <div class="formula" style="margin-top: 10px; font-size: 1.2rem;">M = C + J</div>
+                
+                <div class="legend">
+                    <div><strong>J:</strong> Juros</div>
+                    <div><strong>C:</strong> Capital inicial</div>
+                    <div><strong>i:</strong> Taxa de juros</div>
+                    <div><strong>t:</strong> Tempo</div>
+                    <div><strong>M:</strong> Montante final</div>
+                </div>
+            </div>
+            
+            <p>É comumente utilizado em situações de curto prazo ou em atrasos de contas de consumo (como água e luz).</p>
+        </section>
+
+        <section class="card">
+            <span class="badge">Crescimento Exponencial</span>
+            <h2>Juros Compostos</h2>
+            <p>Os <strong>Juros Compostos</strong> são os famosos "juros sobre juros". A cada novo período, a taxa é aplicada sobre o valor acumulado do período anterior, e não apenas sobre o capital inicial.</p>
+            
+            <div class="formula-container">
+                <div class="formula">M = C · (1 + i)<sup>t</sup></div>
+                
+                <div class="legend">
+                    <div><strong>M:</strong> Montante final</div>
+                    <div><strong>C:</strong> Capital inicial</div>
+                    <div><strong>i:</strong> Taxa de juros</div>
+                    <div><strong>t:</strong> Tempo (exponente)</div>
+                </div>
+            </div>
+            
+            <p>Este é o sistema principal do sistema financeiro global. É o que faz investimentos crescerem muito a longo prazo, mas também o que torna dívidas de cartão de crédito tão perigosas.</p>
+        </section>
+
+        <section class="card">
+            <h2>Resumo Comparativo</h2>
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Característica</th>
+                        <th>Juros Simples</th>
+                        <th>Juros Compostos</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Base de Cálculo</strong></td>
+                        <td>Sempre o Capital Inicial</td>
+                        <td>Capital + Juros acumulados</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Crescimento</strong></td>
+                        <td>Constante (Linear)</td>
+                        <td>Acelerado (Exponencial)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Aplicação</strong></td>
+                        <td>Situações pontuais</td>
+                        <td>Mercado Financeiro</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>Conteúdo Educativo &bull; Matemática Financeira Aplicada</p>
+    </footer>
+
+</body>
+</html>
